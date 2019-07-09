@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Zombies</h1>
+
+<%= form_with(model: Zombie.new) do |form| %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody id = 'zombies'>
+    <%= render @zombies %>
+  </tbody>
+</table>
+
+
+<br>
+
+<%= link_to 'New Zombie', new_zombie_path %>

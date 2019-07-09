@@ -1,0 +1,6 @@
+<tr id='row_<%= zombie.id %>'>
+        <td id="zombie_<%=zombie.id%>"><%= zombie.name %></td>
+        <td><%= link_to 'Show', zombie, class: "show_zombie" %></td>
+        <td><%= link_to 'Edit', edit_zombie_path(zombie), class: 'edit_zombie' %></td>
+        <td><%= link_to 'Destroy', zombie, class: 'delete_zombie' %></td>
+</tr>
